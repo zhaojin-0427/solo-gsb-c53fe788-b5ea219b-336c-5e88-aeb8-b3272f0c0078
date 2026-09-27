@@ -1,0 +1,13 @@
+services:
+  knit-studio:
+    build: .
+    image: knit-pattern-studio:latest
+    container_name: knit-pattern-studio
+    ports:
+      - "8000:8000"
+    volumes:
+      - knit-data:/data
+    restart: unless-stopped
+
+volumes:
+  knit-data:
